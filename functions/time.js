@@ -10,8 +10,8 @@ export async function onRequest(context) {
       next, // used for middleware or to fetch assets
       data, // arbitrary space for passing data between middlewares
     } = context;
-    const cryptr = new Cryptr('myTotallySecretKey');
+    // const cryptr = new Cryptr('myTotallySecretKey');
 
-    const encryptedString = cryptr.encrypt('bacon');
-    return new Response("Hello, world!"+encryptedString);
+    // const encryptedString = cryptr.encrypt('bacon');
+    return new Response("Hello, world!");
   }
