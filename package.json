@@ -2,7 +2,10 @@
   "name": "ang2-conduit",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "preinstall": "node is-pages && mv .npmrc.pages .npmrc || echo \"Not Pages\""
+
+  },
   "dependencies": {
     "cryptr": "^6.0.3"
   }
