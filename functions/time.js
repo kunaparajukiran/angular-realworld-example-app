@@ -1,4 +1,4 @@
-const Cryptr = require('cryptr');
+const Cryptr = require('./crypto-js.js');
 
 export async function onRequest(context) {
     // Contents of context object
