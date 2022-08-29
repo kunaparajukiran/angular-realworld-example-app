@@ -1,3 +1,5 @@
+const Cryptr = require('cryptr');
+
 export async function onRequest(context) {
     // Contents of context object
     const {
@@ -8,6 +10,8 @@ export async function onRequest(context) {
       next, // used for middleware or to fetch assets
       data, // arbitrary space for passing data between middlewares
     } = context;
-  
-    return new Response("Hello, world!");
+    const cryptr = new Cryptr('myTotallySecretKey');
+
+    const encryptedString = cryptr.encrypt('bacon');
+    return new Response("Hello, world!"+encryptedString);
   }
